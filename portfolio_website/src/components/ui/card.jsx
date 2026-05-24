@@ -1,3 +1,7 @@
+import Button from "../ui/button"
+
+
+
 
 export default function ImageCard({ image, title, description, tech}) {
   return (
@@ -28,7 +32,7 @@ export default function ImageCard({ image, title, description, tech}) {
         </p>
 
         {/* Tech Stack */}
-        <ul className="mt-4 flex flex-wrap gap-2">
+        <ul className="mt-4 flex flex-wrap gap-2 place-content-center">
           {tech.map((item) => (
             <li
               key={item}
@@ -38,6 +42,17 @@ export default function ImageCard({ image, title, description, tech}) {
             </li>
           ))}
         </ul>
+
+        {/* Buttons */}
+        <div className="flex items-center justify-center gap-3 mt-3">
+          <Button href="#projects" className="px-4 py-2 text-xs">
+            Live View
+          </Button>
+
+          <Button href="#contact" variant="secondary" className="px-4 py-2 text-xs">
+            View Code
+          </Button>
+        </div>
       </div>
     </article>
   )

@@ -1,4 +1,4 @@
-export default function Button({ href, children, variant = "primary" }) {
+export default function Button({ href, children, variant = "primary", className = "", }) {
   const baseStyles =
     "inline-block border px-6 py-3 text-sm uppercase tracking-[0.2em] transition-colors duration-300"
 
@@ -10,7 +10,7 @@ export default function Button({ href, children, variant = "primary" }) {
   }
 
   return (
-    <a href={href} className={`${baseStyles} ${variants[variant]}`}>
+    <a href={href} className={`${baseStyles} ${variants[variant]} ${className}`}>
       {children}
     </a>
   )
