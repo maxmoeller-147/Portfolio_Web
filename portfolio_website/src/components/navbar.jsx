@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full border-b border-border bg-background/70 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <nav className="mx-auto flex max-w-8xl items-center justify-between px-7 py-5">
        
         {/* Logo */}
         <a href="#home" className="text-lg font-semibold uppercase tracking-[0.35em] text-primary">Max Moeller</a>

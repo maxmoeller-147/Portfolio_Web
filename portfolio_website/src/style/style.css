@@ -14,3 +14,14 @@
 
   --radius-card: 1.5rem;
 }
+
+
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: 'Inter', sans-serif;
+  }
+
+}
