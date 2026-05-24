@@ -7,6 +7,7 @@ const projects = [
       "zombies, zombies everywhere. A thrilling survival game set in a post-apocalyptic world.",
     image:
       "./public/images/zombi.jpg",
+    tech: ["React", "Vite", "Tailwind"],
   },
   {
     title: "Project 2",
@@ -14,6 +15,7 @@ const projects = [
       "a big monster with a big heart. A heartwarming story of friendship and courage in a fantastical world.",
     image:
       "./public/images/face.jpg",
+    tech: ["React", "Vite", "Tailwind"],
   },
   {
     title: "Project 3",
@@ -21,6 +23,7 @@ const projects = [
       "red skies and dark secrets. A gripping mystery thriller that will keep you on the edge of your seat.",
     image:
       "./public/images/red.jpg",
+    tech: ["React", "Vite", "Tailwind"],
   },
 ]
 
@@ -47,6 +50,7 @@ export default function Projects() {
               image={project.image}
               title={project.title}
               description={project.description}
+              tech={project.tech}
             />
           ))}
         </div>
