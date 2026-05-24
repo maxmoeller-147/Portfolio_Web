@@ -1,3 +1,6 @@
+import Button from "./ui/button"
+
+
 export default function Hero() {
   return (
     <section
@@ -25,19 +28,13 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 pt-4">
-          <a
-            href="#projects"
-            className="border border-border bg-surface px-6 py-3 text-sm uppercase tracking-[0.2em] text-primary transition-colors duration-300 hover:bg-primary hover:text-background"
-          >
+          <Button href="#projects">
             View Projects
-          </a>
+          </Button>
 
-          <a
-            href="#contact"
-            className="border border-border px-6 py-3 text-sm uppercase tracking-[0.2em] text-secondary transition-colors duration-300 hover:border-accent hover:text-accent"
-          >
+          <Button href="#contact" variant="secondary">
             Contact
-          </a>
+          </Button>
         </div>
       </div>
     </section>
