@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar"
 import Hero from "./components/hero"
 import Projects from "./components/projects"
+import Skills from "./components/skills"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         </section>
 
         <section id="skills">
-          <h1>Skills</h1>
+          <Skills />
         </section>
 
         <section id="contact">
