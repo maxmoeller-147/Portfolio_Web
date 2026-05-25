@@ -1,3 +1,6 @@
+import { useState } from "react"
+import SkillAccordion from "./ui/accordion"
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -29,6 +32,7 @@ import {
 const techCategories = [
   {
     title: "Frontend",
+    description: "Interfaces, styling and interactive user experiences.",
     technologies: [
       { name: "HTML", icon: FaHtml5 },
       { name: "CSS", icon: FaCss3Alt },
@@ -38,9 +42,9 @@ const techCategories = [
       { name: "Vite", icon: SiVite },
     ],
   },
-
   {
     title: "Backend",
+    description: "Server logic, APIs and application architecture.",
     technologies: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express", icon: SiExpress },
@@ -49,18 +53,18 @@ const techCategories = [
       { name: "REST APIs", icon: FaServer },
     ],
   },
-
   {
     title: "Databases",
+    description: "Data modelling, storage and database fundamentals.",
     technologies: [
       { name: "SQL", icon: FaDatabase },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
     ],
   },
-
   {
     title: "Tools & Workflow",
+    description: "Version control, debugging and developer workflow.",
     technologies: [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
@@ -70,9 +74,9 @@ const techCategories = [
       { name: "Documentation", icon: FaTerminal },
     ],
   },
-
   {
     title: "Testing & Deployment",
+    description: "Testing basics, API testing and deployment setup.",
     technologies: [
       { name: "Jest", icon: SiJest },
       { name: "Pytest", icon: SiPytest },
@@ -83,7 +87,11 @@ const techCategories = [
   },
 ]
 
+
+
 export default function Skills() {
+  const [openIndex, setOpenIndex] = useState(0)
+
   return (
     <section id="skills" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
@@ -97,34 +105,17 @@ export default function Skills() {
           </h2>
         </div>
 
-        <div className="space-y-12">
-          {techCategories.map((category) => (
-            <div key={category.title}>
-              <h3 className="mb-4 text-sm uppercase tracking-[0.25em] text-secondary">
-                {category.title}
-              </h3>
-
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-                {category.technologies.map((tech) => {
-                  const Icon = tech.icon
-
-                  return (
-                    <article
-                      key={tech.name}
-                      className="group border border-border bg-surface p-6 transition-all duration-300 hover:border-accent hover:bg-white/[0.03]"
-                    >
-                      <div className="flex items-center justify-between">
-                        <h4 className="text-sm uppercase tracking-[0.2em] text-primary">
-                          {tech.name}
-                        </h4>
-
-                        <Icon className="text-3xl text-secondary transition-all duration-300 group-hover:scale-110 group-hover:text-accent group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]" />
-                      </div>
-                    </article>
-                  )
-                })}
-              </div>
-            </div>
+        <div className="space-y-4">
+          {techCategories.map((category, index) => (
+            <SkillAccordion
+              key={category.title}
+              category={category}
+              index={index}
+              isOpen={openIndex === index}
+              onToggle={() =>
+                setOpenIndex(openIndex === index ? null : index)
+              }
+            />
           ))}
         </div>
       </div>
