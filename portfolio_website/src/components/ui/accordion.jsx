@@ -13,7 +13,7 @@ export default function SkillAccordion({
         className="flex w-full items-center justify-between gap-6 p-6 text-left"
       >
         <div className="relative">
-          <span className="pointer-events-none absolute -top-6 left-0 text-6xl font-black uppercase tracking-tight text-white/[0.03] transition-all duration-500 group-hover:translate-x-2 group-hover:text-white/[0.05] md:text-8xl">
+          <span className="pointer-events-none absolute -top-6 left-0 text-6xl font-black uppercase tracking-tight text-white/3 transition-all duration-500 group-hover:translate-x-2 group-hover:text-white/5 md:text-8xl">
             {category.title}
           </span>
 

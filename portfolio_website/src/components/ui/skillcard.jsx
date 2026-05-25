@@ -3,7 +3,7 @@ export default function SkillCard({ tech, index, isOpen }) {
 
   return (
     <div
-      className={`group/card flex items-center justify-between border border-border bg-background/60 p-4 transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-white/[0.03] ${
+      className={`group/card flex items-center justify-between border border-border bg-background/60 p-4 transition-all duration-500 hover:-translate-y-1 hover:border-accent hover:bg-white/3 ${
         isOpen
           ? "translate-y-0 opacity-100 blur-0"
           : "translate-y-4 opacity-0 blur-sm"
