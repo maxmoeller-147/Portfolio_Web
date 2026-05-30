@@ -2,7 +2,7 @@ import Button from "../ui/button"
 
 export default function ImageCard({ image, title, description, tech }) {
   return (
-    <article className="group relative h-[340px] w-full overflow-hidden rounded-3xl shadow-lg sm:h-[380px] md:h-[420px]">
+    <article className="group relative h-85 w-full overflow-hidden rounded-3xl shadow-lg sm:h-95 md:h-105">
       {/* Background image */}
       <img
         src={image}
@@ -11,7 +11,7 @@ export default function ImageCard({ image, title, description, tech }) {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent backdrop-blur-[1px] md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/45 to-transparent backdrop-blur-[1px] md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100" />
 
       {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-4 opacity-100 transition-all duration-500 sm:p-6 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">

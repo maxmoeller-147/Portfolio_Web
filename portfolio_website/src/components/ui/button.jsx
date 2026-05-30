@@ -5,7 +5,9 @@ export default function Button({
   variant = "primary",
   size = "md",
   className = "",
-}) {
+}) 
+
+{
   const baseStyles =
     "inline-flex items-center justify-center border uppercase transition-colors duration-300"
 

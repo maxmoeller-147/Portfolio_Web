@@ -61,7 +61,7 @@ export default function SpotlightCard({ children, className = "" }) {
           }}
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/[0.02] via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/2 via-transparent to-transparent" />
 
         <div className="relative z-10 transform-[translateZ(40px)]">
           {children}
