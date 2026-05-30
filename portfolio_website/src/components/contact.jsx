@@ -19,16 +19,16 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="mailto:your@email.com">Email Me</Button>
+            <Button href="mailto:your@email.com" size="lg">
+              Email Me
+            </Button>
 
             <Button href="https://github.com/maxmoeller-147" variant="secondary">
               GitHub
             </Button>
 
             <Button
-              href="https://www.linkedin.com/in/max-moeller-2b7282396/"
-              variant="secondary"
-            >
+              href="https://www.linkedin.com/in/max-moeller-2b7282396/" variant="secondary">
               LinkedIn
             </Button>
           </div>

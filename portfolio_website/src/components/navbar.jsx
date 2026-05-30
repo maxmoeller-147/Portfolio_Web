@@ -45,7 +45,8 @@ export default function Navbar() {
           <Button
             onClick={() => setIsOpen(!isOpen)}
             variant="secondary"
-            className="px-3 py-2 text-[10px] md:hidden"
+            size="sm"
+            className="md:hidden"
           >
             {isOpen ? "Close" : "Menu"}
           </Button>

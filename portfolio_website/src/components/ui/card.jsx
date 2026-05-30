@@ -1,55 +1,45 @@
 import Button from "../ui/button"
 
-
-
-
-export default function ImageCard({ image, title, description, tech}) {
+export default function ImageCard({ image, title, description, tech }) {
   return (
-    <article className="group relative h-100 w-80 overflow-hidden rounded-3xl shadow-lg">
+    <article className="group relative h-[340px] w-full overflow-hidden rounded-3xl shadow-lg sm:h-[380px] md:h-[420px]">
       {/* Background image */}
       <img
         src={image}
         alt={title}
-        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        className="h-full w-full object-cover transition-transform duration-500 md:group-hover:scale-105"
       />
 
-      {/* blur overlay */}
-      <div className="absolute inset-0 opacity-0 transition-opacity duration-50 group-hover:opacity-100">
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent backdrop-blur-[2px]" />
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent backdrop-blur-[1px] md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100" />
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 right-0 translate-y-6 p-6 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-        
-        {/* Title */}
-        <h3 className="text-2xl font-bold uppercase tracking-[0.08em] text-white">
+      <div className="absolute bottom-0 left-0 right-0 p-4 opacity-100 transition-all duration-500 sm:p-6 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+        <h3 className="text-xl font-bold uppercase tracking-[0.08em] text-white sm:text-2xl">
           {title}
         </h3>
 
-        {/* Description */}
-        <p className="mt-2 text-sm leading-relaxed text-white/80">
+        <p className="mt-2 text-xs leading-relaxed text-white/80 sm:text-sm">
           {description}
         </p>
 
-        {/* Tech Stack */}
-        <ul className="mt-4 flex flex-wrap gap-2 place-content-center">
+        <ul className="mt-4 flex flex-wrap justify-center gap-2">
           {tech.map((item) => (
             <li
               key={item}
-              className="border border-white/20 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm"
+              className="border border-white/20 bg-white/10 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-white/70 backdrop-blur-sm sm:px-3 sm:text-xs"
             >
               {item}
             </li>
           ))}
         </ul>
 
-        {/* Buttons */}
-        <div className="flex items-center justify-center gap-3 mt-3">
-          <Button href="#projects" className="px-4 py-2 text-xs">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <Button href="#projects" size="md">
             Live View
           </Button>
 
-          <Button href="#contact" variant="secondary" className="px-4 py-2 text-xs">
+          <Button href="#contact" variant="secondary" size="md">
             View Code
           </Button>
         </div>
