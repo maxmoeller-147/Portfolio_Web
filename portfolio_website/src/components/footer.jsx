@@ -22,16 +22,16 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-border px-6 py-8">
-      <div className="mx-auto flex max-w-8xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-8xl flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
         
         <a
           href="#home"
-          className="text-sm font-semibold uppercase tracking-[0.35em] text-primary"
+          className="text-xs font-semibold uppercase tracking-[0.25em] text-primary sm:text-sm sm:tracking-[0.35em]"
         >
           Max Moeller
         </a>
 
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center gap-5 sm:gap-6">
           {footerLinks.map((link, index) => {
             const Icon = link.icon
 
@@ -51,11 +51,12 @@ export default function Footer() {
                 >
                   <Icon
                     className="
-                      text-xl
+                      text-lg
                       transition-all
                       duration-300
                       group-hover:scale-110
                       group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.25)]
+                      sm:text-xl
                     "
                   />
                 </a>
@@ -64,7 +65,7 @@ export default function Footer() {
           })}
         </ul>
 
-        <p className="text-xs uppercase tracking-[0.2em] text-secondary">
+        <p className="text-[10px] uppercase tracking-[0.15em] text-secondary sm:text-xs sm:tracking-[0.2em]">
           © {new Date().getFullYear()}
         </p>
       </div>
