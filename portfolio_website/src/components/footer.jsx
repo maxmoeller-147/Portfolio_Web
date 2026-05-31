@@ -15,7 +15,7 @@ const footerLinks = [
   },
   {
     icon: FaEnvelope,
-    href: "mailto:your@email.com",
+    href: "maximomoeller@gmail.com",
   },
 ]
 
