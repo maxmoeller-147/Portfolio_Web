@@ -11,23 +11,29 @@ export default function Contact() {
           </span>
 
           <h2 className="mt-4 max-w-3xl text-2xl font-semibold uppercase tracking-[0.04em] text-primary sm:text-3xl md:text-5xl">
-            Let's build together.
+            Let's Build Something Great.
           </h2>
 
           <p className="mt-4 max-w-xl text-xs leading-relaxed text-secondary sm:text-sm md:text-base">
-            I'm currently open to new opportunities, freelance work and creative collaborations.
+            Full-Stack Developer based in Sydney, currently open to new
+            opportunities and collaborations.
           </p>
 
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-secondary md:text-base">
-            I’m open to full-time roles, freelance projects, and collaborations.
-            Whether you have a project in mind or just want to say hi, feel free
-            to reach out. I’m always excited to connect with like-minded
-            individuals and explore new possibilities.
+            I enjoy building modern web applications that combine clean user
+            experiences with practical functionality. Whether you're looking
+            for a developer to join your team, help build a product, or
+            collaborate on a new idea, I'd love to hear from you.
           </p>
 
+          <div className="mt-6 text-sm text-secondary">
+            <p>Sydney, Australia</p>
+            <p>Full-Stack Development · React · Node.js · Python</p>
+          </div>
+
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-start sm:items-start sm:gap-4">
-            <Button 
-              href="mailto:your@email.com" 
+            <Button
+              href="mailto:maximomoeller@gmail.com"
               size="lg"
             >
               Email Me
