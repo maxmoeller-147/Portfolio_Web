@@ -6,12 +6,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen overflow-hidden px-6 py-8 sm:px-8"
     >
-      {/* Background */}
-     <video autoPlay muted loop playsInline
-       className="absolute inset-0 h-full w-full object-cover opacity-20">
-        <source src="/images/plasma-loop-ultralight.webm" type="video/webm" />
-      </video>
-
       {/* Top Hero Bar */}
       <div className="relative z-10 mx-auto flex max-w-6xl items-center justify-between text-xs uppercase tracking-[0.25em] text-secondary">
         <span>Max Moeller</span>
@@ -57,12 +51,11 @@ export default function Hero() {
 
       {/* Bottom Details */}
       <div className="relative z-10 mx-auto flex max-w-6xl justify-between pb-6 text-xs uppercase tracking-[0.25em] text-secondary">
-        <span>Calabaza</span>
+        <span>Calabaza </span>
         <span className="hidden sm:block">Scroll ↓</span>
       </div>
 
-      {/* Bottom Fade */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[5] h-56 bg-gradient-to-b from-transparent via-background/60 to-background" />
     </section>
+
   )
 }

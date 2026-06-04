@@ -8,8 +8,15 @@ import Footer from "./components/footer"
 function App() {
   return (
     <>
+      {/* Global Background */}
+      <div className="pointer-events-none fixed inset-0 -z-10">
+
+      {/* Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-size-[56px_56px] text-primary opacity-[0.03]" />
+      </div>
+
       <Navbar />
-      
+
       <main className="pt-20">
         <section id="home">
           <Hero />
@@ -25,11 +32,10 @@ function App() {
 
         <section id="contact">
           <Contact />
-        </section>        
+        </section>
       </main>
 
       <Footer />
-
     </>
   )
 }

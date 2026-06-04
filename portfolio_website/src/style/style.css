@@ -12,20 +12,26 @@
 }
 
 .light {
-  --color-background: #f4f4f0;
-  --color-surface: #ffffff;
+  --color-background: #ddd7cd;
+  --color-surface: #ece7df;
   --color-primary: #111111;
-  --color-secondary: #52525b;
-  --color-muted: #71717a;
-  --color-border: #d4d4d8;
-  --color-accent: #737373;
+  --color-secondary: #555555;
+  --color-muted: #7a7a7a;
+  --color-border: #c3bcae;
+  --color-accent: #6d665c;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-primary);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
   }
-
 }
