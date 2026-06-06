@@ -1,22 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
-
-const footerLinks = [
-  {
-    name: "GitHub",
-    icon: FaGithub,
-    href: "https://github.com/maxmoeller-147",
-  },
-  {
-    name: "LinkedIn",
-    icon: FaLinkedin,
-    href: "https://www.linkedin.com/in/max-moeller-2b7282396/",
-  },
-  {
-    name: "Email",
-    icon: FaEnvelope,
-    href: "mailto:maximomoeller@gmail.com",
-  },
-]
+import { socials } from "../data/data_socials"
 
 export default function Footer() {
   return (
@@ -30,7 +12,7 @@ export default function Footer() {
         </a>
 
         <ul className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-          {footerLinks.map((link) => {
+          {socials.map((link) => {
             const Icon = link.icon
 
             return (
