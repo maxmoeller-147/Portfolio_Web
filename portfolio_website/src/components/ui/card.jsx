@@ -1,6 +1,13 @@
 import Button from "../ui/button"
 
-export default function ImageCard({ image, title, description, tech }) {
+export default function ImageCard({
+  image,
+  title,
+  description,
+  tech,
+  github,
+  live,
+}) {
   return (
     <article className="group relative h-85 w-full overflow-hidden rounded-none border border-white/10 shadow-lg transition-all duration-500 hover:border-white/50 hover:shadow-[0_0_35px_rgba(255,255,255,0.12)] sm:h-95 md:h-105">
       {/* Silver Border Glow */}
@@ -9,7 +16,7 @@ export default function ImageCard({ image, title, description, tech }) {
       {/* Metallic Sweep */}
       <div className="pointer-events-none absolute inset-y-0 left-[-75%] z-30 w-1/2 skew-x-[-20deg] bg-linear-to-r from-transparent via-white/35 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100" />
 
-      {/* Background image */}
+      {/* Background Image */}
       <img
         src={image}
         alt={title}
@@ -41,13 +48,17 @@ export default function ImageCard({ image, title, description, tech }) {
         </ul>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-          <Button href="#projects" size="md">
-            Live View
-          </Button>
+          {live && (
+            <Button href={live} size="md">
+              Live View
+            </Button>
+          )}
 
-          <Button href="#contact" variant="secondary" size="md">
-            View Code
-          </Button>
+          {github && (
+            <Button href={github} variant="secondary" size="md">
+              View Code
+            </Button>
+          )}
         </div>
       </div>
     </article>
